@@ -1,0 +1,33 @@
+local el = game:GetService'Workspace'.Easy.Entry.LiftEntry
+local ml = game:GetService'Workspace'.Medium.Entry.LiftEntry
+local hl = game:GetService'Workspace'.Hard.Entry.LiftEntry
+local root = game:GetService'Players'.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+
+print("Launched!")
+while getgenv().autofarm == true do
+	if game:GetService("Players").LocalPlayer.Ingame.Value == 0 and game:GetService("Players").LocalPlayer.Waiting.Value == 0 then -- checks ingame and waiting values
+		if game:GetService("Workspace").Easy.Info.Value == "Game is Ready!" then
+			root.CFrame = el.CFrame
+			game:GetService'RunService'.RenderStepped:wait()
+			game:GetService("Workspace").Easy.Info.Changed:wait()
+			game:GetService("Workspace").Easy.Info.Changed:wait()
+			game:GetService("Workspace").Easy.Info.Changed:wait()
+			root.CFrame = game:GetService("Workspace").Easy.Main.Exit.CFrame
+		elseif game:GetService("Workspace").Medium.Info.Value == "Game is Ready!" then
+			root.CFrame = ml.CFrame
+			game:GetService'RunService'.RenderStepped:wait()
+			game:GetService("Workspace").Medium.Info.Changed:wait()
+			game:GetService("Workspace").Medium.Info.Changed:wait()
+			game:GetService("Workspace").Medium.Info.Changed:wait()
+			root.CFrame = game:GetService("Workspace").Medium.Main.Exit.CFrame
+		elseif game:GetService("Workspace").Hard.Info.Value == "Game is Ready!" then
+			root.CFrame = hl.CFrame
+			game:GetService'RunService'.RenderStepped:wait()
+			game:GetService("Workspace").Hard.Info.Changed:wait()
+			game:GetService("Workspace").Hard.Info.Changed:wait()
+			game:GetService("Workspace").Hard.Info.Changed:wait()
+			root.CFrame = game:GetService("Workspace").Hard.Main.Exit.CFrame	
+		end
+	end
+	game:GetService'RunService'.RenderStepped:wait()
+end
