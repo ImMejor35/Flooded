@@ -1,0 +1,22 @@
+print("AutoButton&Code Running...")
+while wait() do
+     	local function lol()
+          for i,v in pairs(game.Workspace:GetDescendants()) do
+                	if v.Name == "ClickDetector" and v.Parent.Parent.MainOutput.BrickColor ~= "Bright green" then
+                     	if math.random(0,1) == 1 then
+                         	fireclickdetector(v,2)
+                  	  end
+                    	game:GetService'RunService'.RenderStepped:wait()
+           			  end
+              end
+          end
+         	for i,v in pairs(game.Workspace:GetDescendants()) do
+             	if v:IsA("TouchTransmitter") and v.Parent.Name == "Button" then
+                 	  firetouchinterest(v.Parent,game.Players.LocalPlayer.Character.HumanoidRootPart,1)
+                  	game:GetService'RunService'.RenderStepped:wait()
+                  	firetouchinterest(v.Parent,game.Players.LocalPlayer.Character.HumanoidRootPart,0)
+                  	game:GetService'RunService'.RenderStepped:wait()
+                  	v.Parent.Name = "Clicked"
+              	end
+      		end
+end
