@@ -1,5 +1,5 @@
 print("AutoButton&Code Running...")
-while getenv().auto == true do
+while getgenv().auto == true do
      	local function lol()
           for i,v in pairs(game.Workspace:GetDescendants()) do
                 	if v.Name == "ClickDetector" and v.Parent.Parent.MainOutput.BrickColor ~= "Bright green" then
