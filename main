@@ -52,7 +52,7 @@ Tab:AddToggle({
 	  lol()
 	  game:GetService'RunService'.RenderStepped:wait()
          	for i,v in pairs(game.Workspace:GetDescendants()) do
-             	if v:IsA("TouchTransmitter") and v.Parent.Name == "Button" then
+             	if v:IsA("TouchTransmitter") and v.Parent.Name == "Button" and getgenv().ingame ~= true then
                  	  firetouchinterest(v.Parent,game.Players.LocalPlayer.Character.HumanoidRootPart,1)
                   	game:GetService'RunService'.RenderStepped:wait()
                   	firetouchinterest(v.Parent,game.Players.LocalPlayer.Character.HumanoidRootPart,0)
