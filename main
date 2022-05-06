@@ -48,7 +48,6 @@ Tab:AddToggle({
       		end
 
 	wait()
-	end
 })
 Tab:AddLabel("Fixes")
 Tab:AddButton({
