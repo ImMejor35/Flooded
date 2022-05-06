@@ -11,21 +11,27 @@ while getgenv().autofarm == true do
 			game:GetService("Workspace").Easy.Info.Changed:wait()
 			game:GetService("Workspace").Easy.Info.Changed:wait()
 			game:GetService("Workspace").Easy.Info.Changed:wait()
+			getgenv().ingame = true
 			root.CFrame = game:GetService("Workspace").Easy.Main.Exit.CFrame
+			getgenv().ingame = false
 		elseif game:GetService("Workspace").Medium.Info.Value == "Game is Ready!" then
 			root.CFrame = ml.CFrame
 			game:GetService'RunService'.RenderStepped:wait()
 			game:GetService("Workspace").Medium.Info.Changed:wait()
 			game:GetService("Workspace").Medium.Info.Changed:wait()
 			game:GetService("Workspace").Medium.Info.Changed:wait()
+			getgenv().ingame = true
 			root.CFrame = game:GetService("Workspace").Medium.Main.Exit.CFrame
+			getgenv().ingame = false
 		elseif game:GetService("Workspace").Hard.Info.Value == "Game is Ready!" then
 			root.CFrame = hl.CFrame
 			game:GetService'RunService'.RenderStepped:wait()
 			game:GetService("Workspace").Hard.Info.Changed:wait()
 			game:GetService("Workspace").Hard.Info.Changed:wait()
 			game:GetService("Workspace").Hard.Info.Changed:wait()
-			root.CFrame = game:GetService("Workspace").Hard.Main.Exit.CFrame	
+			getgenv().ingame = true
+			root.CFrame = game:GetService("Workspace").Hard.Main.Exit.CFrame
+			getgenv().ingame = false
 		end
 	end
 	game:GetService'RunService'.RenderStepped:wait()
