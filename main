@@ -28,6 +28,7 @@ Tab:AddToggle({
 	getgenv().auto = Value
     print("AutoButton&Code Running...")
 	while getgenv().auto == true do
+     	local function lol()
           for i,v in pairs(game.Workspace:GetDescendants()) do
                 	if v.Name == "ClickDetector" and v.Parent.Parent.MainOutput.BrickColor ~= "Bright green" then
                      	if math.random(0,1) == 1 then
@@ -46,8 +47,8 @@ Tab:AddToggle({
                   	v.Parent.Name = "Clicked"
               	end
       		end
-
-	wait()
+		end
+	end
 })
 Tab:AddLabel("Fixes")
 Tab:AddButton({
