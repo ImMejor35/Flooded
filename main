@@ -28,7 +28,6 @@ Tab:AddToggle({
 	getgenv().auto = Value
     print("AutoButton&Code Running...")
 	while getgenv().auto == true do
-	wait()
      	local function lol()
           for i,v in pairs(game.Workspace:GetDescendants()) do
                 	if v.Name == "ClickDetector" and v.Parent.Parent.MainOutput.BrickColor ~= "Bright green" then
@@ -39,12 +38,24 @@ Tab:AddToggle({
            			  end
               end
           end
+	  lol()
+	  game:GetService'RunService'.RenderStepped:wait()
+	  lol()
+	  game:GetService'RunService'.RenderStepped:wait()
+	  lol()
+	  game:GetService'RunService'.RenderStepped:wait()
+	  lol()
+	  game:GetService'RunService'.RenderStepped:wait()
+	  lol()
+	  game:GetService'RunService'.RenderStepped:wait()
+	  lol()
+	  game:GetService'RunService'.RenderStepped:wait()
          	for i,v in pairs(game.Workspace:GetDescendants()) do
              	if v:IsA("TouchTransmitter") and v.Parent.Name == "Button" then
                  	  firetouchinterest(v.Parent,game.Players.LocalPlayer.Character.HumanoidRootPart,1)
                   	game:GetService'RunService'.RenderStepped:wait()
                   	firetouchinterest(v.Parent,game.Players.LocalPlayer.Character.HumanoidRootPart,0)
-                  	game:GetService'RunService'.RenderStepped:wait()
+                  	wait()
                   	v.Parent.Name = "Clicked"
               	end
       		end
