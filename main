@@ -80,6 +80,12 @@ Tab:AddButton({
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
   	end    
 })
+Tab:AddButton({
+	Name = "Lots of Points!",
+	Callback = function()
+    	workspace.svcl_com.PromptSum:FireServer(999999,999999,999999)
+  	end    
+})
 OrionLib:MakeNotification({
 	Name = "Flooded by: Espon",
 	Content = "Loaded.",
