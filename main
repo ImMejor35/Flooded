@@ -1,3 +1,9 @@
+-- anti afk
+local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+
+-- ui lib/gui and scripts
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 setclipboard("https://discord.gg/Ah5x66pht2")
 OrionLib:MakeNotification({
