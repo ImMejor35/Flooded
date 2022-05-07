@@ -91,6 +91,13 @@ Tab:AddButton({
     	workspace.svcl_com.PromptSum:FireServer(999999,999999,999999)
   	end    
 })
+Tab:AddColorpicker({
+	Name = "Theme Color (Bypass)",
+	Default = Color3.fromRGB(13, 105, 172),
+	Callback = function(value)
+		game:GetService("Players").ImMejor.Water.Value = value
+	end	  
+})
 OrionLib:MakeNotification({
 	Name = "Flooded by: Espon",
 	Content = "Loaded.",
