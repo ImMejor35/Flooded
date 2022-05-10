@@ -105,6 +105,13 @@ Tab:AddColorpicker({
 		game:GetService("Players").ImMejor.Water.Value = value
 	end	  
 })
+Tab:AddColorpicker({
+	Name = "Fire",
+	Default = Color3.fromRGB(0, 0, 0),
+	Callback = function(Value)
+		workspace.svcl_com.ShopParticles:FireServer(Value)
+	end	  
+})
 Tab:AddButton({
 	Name = "Lots of Points!",
 	Callback = function()
