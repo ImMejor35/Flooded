@@ -63,7 +63,7 @@ auto:NewToggle("Auto-Button & Code", "Automatically presses all buttons and crac
 end)
 game:GetService("Players").ImMejor.Water.Value = Color3.fromRGB(255, 0, 0)
 cosmetic:NewColorPicker("Theme Color", "Change theme color without gamepass!", Color3.fromRGB(255, 0, 0), function(color)
-    game:GetService("Players").ImMejor.Water.Value = Color3.fromRGB(255, 0, 0)
+    game:GetService("Players").ImMejor.Water.Value = color
 end)
 workspace.svcl_com.ShopParticles:FireServer(color)
 cosmetic:NewColorPicker("Custom Fire (Black is Off)", "Custom Fire (if fire doesnt appear reset/animation fix)", Color3.fromRGB(255, 0, 0), function(color)
