@@ -1,7 +1,7 @@
 local el = game:GetService'Workspace'.Easy.Entry.LiftEntry
 local ml = game:GetService'Workspace'.Medium.Entry.LiftEntry
 local hl = game:GetService'Workspace'.Hard.Entry.LiftEntry
-local root = game:GetService'Players'.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+local root = game:GetService'Players'.LocalPlayer.Character:WaitForChild("HumanoidRootPart") or game:GetService'Players'.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 
 while getgenv().autofarm == true do
 	if game:GetService("Players").LocalPlayer.Ingame.Value == 0 and game:GetService("Players").LocalPlayer.Waiting.Value == 0 then -- checks ingame and waiting values
