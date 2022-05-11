@@ -1,8 +1,6 @@
 if getgenv().tomato == true then
-if not colors then
+if not getenv().theme then
 	getgenv().theme = "BloodTheme"
-else
-	getenv().theme = colors
 end
 	-- anti afk
 local bb=game:GetService'VirtualUser'
@@ -20,7 +18,7 @@ local function items()
 end
 --ui lib/gui and scripts
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Flooded v3 | Tomato Edition", getgenv().theme)
+local Window = Library.CreateLib("Flooded v3 | Tomato Edition", colors) or Library.CreateLib("Flooded v3 | Tomato Edition", getgenv().theme)
 local auto = Window:NewTab("Auto"):NewSection("Auto")
 local cosmetic = Window:NewTab("Cosmetic"):NewSection("Cosmetic")
 local fixes = Window:NewTab("Fixes"):NewSection("Fixes")
