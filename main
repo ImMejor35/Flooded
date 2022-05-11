@@ -1,5 +1,7 @@
-if not getgenv().theme then
-	getgenv().theme = "BloodTheme"	
+if not colors then
+	getgenv().theme = "BloodTheme"
+else
+	getenv().theme = colors
 end
 if getgenv().tomato == true then
 	-- anti afk
