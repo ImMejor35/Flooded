@@ -202,12 +202,6 @@ Tab:AddButton({
     	workspace.svcl_com.PromptSum:FireServer(999999,999999,999999)
   	end    
 })
-Tab:AddButton({
-	Name = "Infinite Yield",
-	Callback = function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-  	end    
-})
 OrionLib:MakeNotification({
 	Name = "Flooded by: Espon",
 	Content = "Loaded.",
