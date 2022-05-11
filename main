@@ -1,9 +1,9 @@
+if getgenv().tomato == true then
 if not colors then
 	getgenv().theme = "BloodTheme"
 else
 	getenv().theme = colors
 end
-if getgenv().tomato == true then
 	-- anti afk
 local bb=game:GetService'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
