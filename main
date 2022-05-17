@@ -42,10 +42,6 @@ auto:Toggle("Auto-Buttons", "Automatically presses buttons for you!",false, func
         end
     end
 end)
-auto:Toggle("Code-Cracker", "Automatically cracks the code for you!",false, function(t)
-    getgenv().code = t
-    while getgenv().code == true do
-    wait(2)
     local function lol()
         for i,v in pairs(game.Workspace:GetDescendants()) do
             if v.Name == "ClickDetector" and v.Parent.Parent.MainOutput.BrickColor ~= "Bright green" then
@@ -56,6 +52,7 @@ auto:Toggle("Code-Cracker", "Automatically cracks the code for you!",false, func
             end
         end
     end
+auto:Bind("Crack Code", Enum.KeyCode.Q, function()
     lol()
     game:GetService'RunService'.RenderStepped:wait()
     lol()
@@ -69,7 +66,12 @@ auto:Toggle("Code-Cracker", "Automatically cracks the code for you!",false, func
     lol()
     game:GetService'RunService'.RenderStepped:wait()
     lol()
-    end
+    game:GetService'RunService'.RenderStepped:wait()
+    lol()
+    game:GetService'RunService'.RenderStepped:wait()
+    lol()
+    game:GetService'RunService'.RenderStepped:wait()
+    lol()
 end)
 cosmetic:Label("Theme Color")
 cosmetic:Colorpicker("Theme Color", Color3.fromRGB(255,0,0), function(t)
