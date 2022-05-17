@@ -1,3 +1,5 @@
+local sound = Instance.new("StringValue")
+sound.Parent = game.Players.LocalPlayer
 if getgenv().tomato == true then
 	-- anti afk
 local bb=game:GetService'VirtualUser'
@@ -87,6 +89,13 @@ fixes:Button("Animation Fix", "Fixes the animation bug! (If it looks odd reset a
 end)
 other:Dropdown("Give items", items(), function(t)
     workspace.svcl_com.ShopExtra:FireServer(t)
+end)
+other:Textbox("Sound ID", "Change to custom sound id for inf taunt default is scream.", 58520081, function(t)
+    sound.Value = t
+    workspace.svcl_com.ShopTaunt:FireServer("http://www.roblox.com/asset?id=" .. sound.Value)
+end)
+other:Bind("Infinite Taunt", Enum.KeyCode.e, function()
+    workspace.svcl_com.Taunt:FireServer()
 end)
 other:Textbox("Points Editor", "Change the amount of points you have! (Press Enter.)", true, function(t)
     workspace.svcl_com.PromptSum:FireServer(points(t),0,0)
