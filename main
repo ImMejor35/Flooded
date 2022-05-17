@@ -94,7 +94,7 @@ other:Textbox("Sound ID", "Change to custom sound id for inf taunt default is sc
     sound.Value = t
     workspace.svcl_com.ShopTaunt:FireServer("http://www.roblox.com/asset?id=" .. sound.Value)
 end)
-other:Bind("Infinite Taunt", Enum.KeyCode.e, function()
+other:Bind("Infinite Taunt", Enum.KeyCode.E, function()
     workspace.svcl_com.Taunt:FireServer()
 end)
 other:Textbox("Points Editor", "Change the amount of points you have! (Press Enter.)", true, function(t)
