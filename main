@@ -21,7 +21,7 @@ local function points(amount)
     return amount - ct
 end
 local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
-local win = Flux:Window("Flooded v3", "Tomato Edition", Color3.fromRGB(255, 0, 0), Enum.KeyCode.LeftControl)
+local win = Flux:Window("Flooded v3", "Tomato Edition", Color3.fromRGB(255, 0, 0), Enum.KeyCode.K)
 local auto = win:Tab("Auto", "http://www.roblox.com/asset/?id=6023426915")
 local cosmetic = win:Tab("Cosmetic", "http://www.roblox.com/asset/?id=6035202069")
 local fixes = win:Tab("Fixes", "http://www.roblox.com/asset/?id=8646693731")
@@ -101,7 +101,7 @@ other:Textbox("Points Editor", "Change the amount of points you have! (Press Ent
     workspace.svcl_com.PromptSum:FireServer(points(t),0,0)
     print("huh")
 end)
-Flux:Notification("Flooded v3 Loaded! (Press Ctrl to open and close)", "Thanks")
+Flux:Notification("Flooded v3 Loaded! (Press 'K' to open and close)", "Ok.")
 else
 -- anti afk
 local bb=game:GetService'VirtualUser'
