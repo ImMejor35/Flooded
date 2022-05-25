@@ -101,6 +101,36 @@ other:Textbox("Points Editor", "Change the amount of points you have! (Press Ent
     workspace.svcl_com.PromptSum:FireServer(points(t),0,0)
     print("huh")
 end)
+other:Button("Neutralize Water", "Water doesn't kill anymore (Can't be undone.)", function()
+    game:GetService("Workspace").Easy.ChildAdded:Connect(function(child)
+    if child.Name == "Main" then
+        child:WaitForChild("Water4D").CanTouch = false
+        child:WaitForChild("Water4").CanTouch = false
+        child:WaitForChild("Water3").CanTouch = false
+        child:WaitForChild("Water2").CanTouch = false
+        child:WaitForChild("Water1").CanTouch = false
+    end
+end)
+game:GetService("Workspace").Medium.ChildAdded:Connect(function(child)
+    if child.Name == "Main" then
+        child:WaitForChild("Water4D").CanTouch = false
+        child:WaitForChild("Water4").CanTouch = false
+        child:WaitForChild("Water3").CanTouch = false
+        child:WaitForChild("Water2").CanTouch = false
+        child:WaitForChild("Water1").CanTouch = false
+    end
+end)
+game:GetService("Workspace").Hard.ChildAdded:Connect(function(child)
+    if child.Name == "Main" then
+        child:WaitForChild("Water4D").CanTouch = false
+        child:WaitForChild("Water4").CanTouch = false
+        child:WaitForChild("Water3").CanTouch = false
+        child:WaitForChild("Water2").CanTouch = false
+        child:WaitForChild("Water1").CanTouch = false
+    end
+end)
+    Flux:Notification("Neutralized Water!", "Thanks")
+end)
 Flux:Notification("Flooded v3 Loaded! (Press 'K' to open and close)", "Ok.")
 else
 -- anti afk
