@@ -49,6 +49,6 @@ while getgenv().autofarm == true and task.wait() do
                 task.wait()
             until LP.Ingame.Value == 0
         end
-        print("Gained",WinsGained,"so far!")
+        warn("Gained",WinsGained,"so far!")
     end
 end
