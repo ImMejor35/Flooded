@@ -10,7 +10,7 @@ local function getroot()
     return LP.Character:WaitForChild("HumanoidRootPart")
 end
 
-while getgenv().autofarm == true and task.wait() do
+while getgenv().autofarm == true and task.wait(1) do
     if LP.Ingame.Value == 0 and LP.Waiting.Value == 0 then -- checks ingame and waiting values
         if workspace.Easy.Info.Value == "Game is Ready!" then
             WinsGained += 1
